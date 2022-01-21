@@ -23,7 +23,7 @@ public class enemySpawn : MonoBehaviour
         spLeft = playerLeft.transform.position.x + (UnityEngine.Random.Range(-2,2));
         spRight = playerRight.transform.position.x + (UnityEngine.Random.Range(-1, 2));
     }
-
+   
     void Update()
     {
         spawn();
