@@ -7,10 +7,10 @@ public class enemySpawn : MonoBehaviour
 {
     public GameObject enemyUp;
     public GameObject enemyDown;
-    public GameObject playerUp;
-    public GameObject playerDown;
+    public GameObject playerLeft;
+    public GameObject playerRight;
 
-    float             spUp,spDown;
+    float             spLeft,spRight;
     public int      randomR;
     public float    spawnRate = 0.02f;
     float           nextSpawn = 0.0f;
@@ -20,8 +20,8 @@ public class enemySpawn : MonoBehaviour
     void Start()
     {
         randomR = 1;
-        spUp = playerDown.transform.position.x + (UnityEngine.Random.Range(-2,2));
-        spDown = playerDown.transform.position.x + (UnityEngine.Random.Range(-1, 2));
+        spLeft = playerLeft.transform.position.x + (UnityEngine.Random.Range(-2,2));
+        spRight = playerRight.transform.position.x + (UnityEngine.Random.Range(-1, 2));
     }
 
     void Update()
@@ -33,32 +33,32 @@ public class enemySpawn : MonoBehaviour
     {
         if (Time.time > nextSpawn)
         {
-            randomR = UnityEngine.Random.Range(1, 2);
+            randomR = UnityEngine.Random.Range(1, 3);
             nextSpawn = Time.time + (UnityEngine.Random.Range(1, 2) - 0.5f);
-            spUp = playerUp.transform.position.x + (UnityEngine.Random.Range(-2, 2));
-            spDown = playerDown.transform.position.y + (UnityEngine.Random.Range(-1, 2));
+            spLeft = playerLeft.transform.position.x + (UnityEngine.Random.Range(-2, 2));
+            spRight = playerRight.transform.position.y + (UnityEngine.Random.Range(-1, 2));
 
-            whereToSpawnUp = new Vector3(spUp, 7, 0);
-            whereToSpawnDown = new Vector3(11, spDown, 0);
+            whereToSpawnUp = new Vector3(spLeft, 7, 0);
+            whereToSpawnDown = new Vector3(11, spRight, 0);
 
             if (randomR == 1)
             {
                 Instantiate(enemyUp, whereToSpawnUp, Quaternion.identity);
                 Instantiate(enemyDown, whereToSpawnDown, Quaternion.identity);
-                spUp = playerUp.transform.position.x + (UnityEngine.Random.Range(-2, 2));
-                spDown = playerDown.transform.position.y + (UnityEngine.Random.Range(-1, 2));
+                spLeft = playerLeft.transform.position.x + (UnityEngine.Random.Range(-2, 2));
+                spRight = playerRight.transform.position.y + (UnityEngine.Random.Range(-1, 2));
             }
             if (randomR == 2)
             {
                 Instantiate(enemyUp, whereToSpawnUp, Quaternion.identity);
                 Instantiate(enemyDown, whereToSpawnDown, Quaternion.identity);
-                spUp = playerUp.transform.position.x + (UnityEngine.Random.Range(-2, 2));
-                spDown = playerDown.transform.position.y + (UnityEngine.Random.Range(-1, 2));
+                spLeft = playerLeft.transform.position.x + (UnityEngine.Random.Range(-2, 2));
+                spRight = playerRight.transform.position.y + (UnityEngine.Random.Range(-1, 2));
             }
             if (randomR == 3)
             {
                 Instantiate(enemyUp, whereToSpawnUp, Quaternion.identity);
-                spUp = playerUp.transform.position.y + (UnityEngine.Random.Range(-2, 2));
+                spLeft = playerLeft.transform.position.y + (UnityEngine.Random.Range(-2, 2));
             }
         }
     }
