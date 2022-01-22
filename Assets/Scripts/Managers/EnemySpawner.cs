@@ -39,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
                 enemy = EnemyPoolRight.Instance.GetFromPool();
                 
             enemy.transform.position = spawnPositionsTr[spawnIdx].position;
+            enemy.transform.GetChild(0).position = enemy.transform.position;
             if (enemy.transform.GetChild(0) != null)
                 enemy.transform.GetChild(0).parent = null;
             

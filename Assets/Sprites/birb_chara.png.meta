@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: df3b4ad1e3b988e459214b055d34acd3
+guid: 8c0190ba085ecc04eb29f35631ccfb30
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1071657277700421223
+    second: birb_chara_0
+  - first:
+      213: 2900716908555808948
+    second: birb_chara_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 270
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,64 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jelly_chara_0
+      name: birb_chara_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 621
-        width: 283
-        height: 459
-      alignment: 9
-      pivot: {x: 0.49564657, y: 0.50268406}
+        x: 0
+        y: 618
+        width: 640
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c7d832a0d1b5c2a0800000000000000
-      internalID: -6717767759520278587
+      spriteID: 766bb4ebd9a4fde00800000000000000
+      internalID: 1071657277700421223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jelly_chara_1
+      name: birb_chara_1
       rect:
         serializedVersion: 2
-        x: 352
-        y: 651
-        width: 295
-        height: 428
-      alignment: 9
-      pivot: {x: 0.520882, y: 0.57484305}
+        x: 0
+        y: 258
+        width: 640
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3ddaf4f3fd086c70800000000000000
-      internalID: 8964430399719267646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jelly_chara_2
-      rect:
-        serializedVersion: 2
-        x: 679
-        y: 658
-        width: 283
-        height: 422
-      alignment: 9
-      pivot: {x: 0.5261209, y: 0.5291951}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c72ab258f8a2d520800000000000000
-      internalID: 2725426509005858757
+      spriteID: 4b03070e8aa614820800000000000000
+      internalID: 2900716908555808948
       vertices: []
       indices: 
       edges: []
