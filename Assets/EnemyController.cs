@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
 
     [HideInInspector] public Transform movePoint = default;
     
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] public static float moveSpeed = 5f;
     private float timer = default;
     [SerializeField] private float movePointInterval = 1f;
     
