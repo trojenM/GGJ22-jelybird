@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform bird, jellyFish;
+    [SerializeField] private Transform horizontalBorderLimits;
+
+    private Transform movePointBird, movePointJellyFish;
+
+    [SerializeField] private float moveSpeed = 5f;
+
+    void Awake()
     {
+        movePointBird = bird.GetChild(0);
+        movePointBird.parent = null;
         
+        movePointJellyFish = jellyFish.GetChild(0);
+        movePointJellyFish.parent = null;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        float xInput = Input.GetAxisRaw("Horizontal");
         
+        float leftLimit = horizontalBorderLimits.GetChild(0).position.x;
+        float rightLimit = horizontalBorderLimits.GetChild(1).position.x;
+
+        bird.position = Vector3.MoveTowards(bird.position, movePointBird.position, moveSpeed * Time.deltaTime);
+        jellyFish.position = Vector3.MoveTowards(jellyFish.position, movePointJellyFish.position, moveSpeed * Time.deltaTime);
+        
+        if (Vector3.Distance(bird.position, movePointBird.position) <= 0.05f)
+        {
+            if (Mathf.Abs(xInput) == 1f && (movePointBird.position.x + xInput > leftLimit) && (movePointBird.position.x + xInput < rightLimit))
+            {
+                movePointBird.Translate(Vector3.right * xInput);
+                movePointJellyFish.Translate(Vector3.up * xInput);
+            }    
+        }
     }
 }
