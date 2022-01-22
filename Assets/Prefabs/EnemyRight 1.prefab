@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6373868980123053739}
   - component: {fileID: 4154507007536595906}
   - component: {fileID: 8364609088862437314}
-  - component: {fileID: -2423501522935129574}
-  - component: {fileID: -532858151432967961}
+  - component: {fileID: -5736475075195123903}
+  - component: {fileID: 7161194361679888291}
   m_Layer: 0
-  m_Name: EnemyLeft
+  m_Name: EnemyRight 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3111500356509144412}
+  - {fileID: 6366679795725995492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1342968967
-  m_SortingLayer: 1
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -2769817722696815416, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
+  m_SortingLayerID: 1034512365
+  m_SortingLayer: 2
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1597694423086756950, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe7440e3de04884d96e344a89c9be40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLeftEnemy: 1
+  isLeftEnemy: 0
   movePoint: {fileID: 0}
   movePointInterval: 1
---- !u!61 &-2423501522935129574
+--- !u!61 &-5736475075195123903
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1426666, y: 1.1493334}
+    oldSize: {x: 0.99833333, y: 1.0683334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-532858151432967961
+--- !u!114 &7161194361679888291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: -2769817722696815416, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
-  - {fileID: 1281211584731451245, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
-  - {fileID: 1119916477710034131, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
---- !u!1 &2557337919130059707
+  - {fileID: 8949630914895392566, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+  - {fileID: 6151430440347144782, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+  - {fileID: 1777199918630693474, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+--- !u!1 &2285140774140763186
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3111500356509144412}
+  - component: {fileID: 6366679795725995492}
   m_Layer: 0
   m_Name: MovePoint
   m_TagString: Untagged
@@ -159,13 +159,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3111500356509144412
+--- !u!4 &6366679795725995492
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2557337919130059707}
+  m_GameObject: {fileID: 2285140774140763186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

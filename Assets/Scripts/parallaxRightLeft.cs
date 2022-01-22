@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class parallaxRightLeft : MonoBehaviour
 {
-    public GameObject BackgroundBýr;
-    public GameObject BackgroundIký;
+    public GameObject BackgroundBÃ½r;
+    public GameObject BackgroundIkÃ½;
 
     Rigidbody2D fizikBir;
     Rigidbody2D fizikIki;
@@ -16,19 +16,19 @@ public class parallaxRightLeft : MonoBehaviour
     public float hiz = 8;
     void Start()
     {
-        fizikBir = BackgroundBýr.GetComponent<Rigidbody2D>();
-        fizikIki = BackgroundIký.GetComponent<Rigidbody2D>();
+        fizikBir = BackgroundBÃ½r.GetComponent<Rigidbody2D>();
+        fizikIki = BackgroundIkÃ½.GetComponent<Rigidbody2D>();
 
         fizikBir.velocity = new Vector2(-hiz, 0);
         fizikIki.velocity = new Vector2(-hiz - 1, 0);
 
-        startPos = new Vector3(BackgroundBýr.GetComponent<BoxCollider2D>().size.x,
-                                BackgroundBýr.transform.position.y,
-                                BackgroundBýr.transform.position.z);
-        startPos2 = new Vector3(BackgroundIký.GetComponent<BoxCollider2D>().size.x,
-                                BackgroundIký.transform.position.y,
-                                BackgroundIký.transform.position.z);
-        uzunluk = BackgroundBýr.GetComponent<BoxCollider2D>().size.x;
+        startPos = new Vector3(BackgroundBÃ½r.GetComponent<BoxCollider2D>().size.x,
+                                BackgroundBÃ½r.transform.position.y,
+                                BackgroundBÃ½r.transform.position.z);
+        startPos2 = new Vector3(BackgroundIkÃ½.GetComponent<BoxCollider2D>().size.x,
+                                BackgroundIkÃ½.transform.position.y,
+                                BackgroundIkÃ½.transform.position.z);
+        uzunluk = BackgroundBÃ½r.GetComponent<BoxCollider2D>().size.x;
     }
 
 
@@ -41,16 +41,17 @@ public class parallaxRightLeft : MonoBehaviour
 
     private void repeat()
     {
-
-        if (BackgroundBýr.transform.position.x <= -uzunluk - 3f)
+        fizikBir.velocity = new Vector2(-hiz, 0);
+        fizikIki.velocity = new Vector2(-hiz - 1, 0);
+        if (BackgroundBÃ½r.transform.position.x <= -uzunluk)
         {
-            Debug.Log(BackgroundBýr.transform.position.y);
-            BackgroundBýr.transform.position += new Vector3(uzunluk * 3, 0);
+            Debug.Log(BackgroundBÃ½r.transform.position.y);
+            BackgroundBÃ½r.transform.position += new Vector3(uzunluk * 2, 0);
         }
 
-        if (BackgroundIký.transform.position.x <= -uzunluk - 3f)
+        if (BackgroundIkÃ½.transform.position.x <= -uzunluk)
         {
-            BackgroundIký.transform.position += new Vector3(uzunluk * 3, 0);
+            BackgroundIkÃ½.transform.position += new Vector3(uzunluk * 2, 0);
         }
     }
 }

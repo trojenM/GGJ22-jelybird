@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4154507007536595906}
   - component: {fileID: 8364609088862437314}
   - component: {fileID: -5736475075195123903}
+  - component: {fileID: 7161194361679888291}
   m_Layer: 0
   m_Name: EnemyRight
   m_TagString: Enemy
@@ -71,11 +72,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1034512365
+  m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 463036511507312263, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLeftEnemy: 0
   movePoint: {fileID: 0}
-  moveSpeed: 3
   movePointInterval: 1
 --- !u!61 &-5736475075195123903
 BoxCollider2D:
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.99833333, y: 1.0683334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,6 +127,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7161194361679888291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680246731647543808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f35f2ea30de7c4297c0cf538bcd467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 463036511507312263, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+  - {fileID: 6883125360582886753, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
+  - {fileID: -5408059294399454960, guid: 862c83841a9aedd45b72343d713d0a27, type: 3}
 --- !u!1 &2285140774140763186
 GameObject:
   m_ObjectHideFlags: 0

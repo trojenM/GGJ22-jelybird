@@ -26,10 +26,10 @@ public class eventSystem : MonoBehaviour
 
     void eventTimer()
     {
-        count = Time.deltaTime;
+        count += Time.deltaTime;
         if (count >= eventCount && evnt == 0)
         {
-            randomR = UnityEngine.Random.Range(1, 11);
+            randomR = UnityEngine.Random.Range(1, 4);
             if (randomR == 1)
                 PlayerController.moveSpeed = 7.5f;
             if (randomR == 2)
@@ -42,7 +42,10 @@ public class eventSystem : MonoBehaviour
             count = 0;
             evnt = randomR;
         }
-        eventTime -= Time.deltaTime;
+        
+        if (evnt != 0)
+            eventTime -= Time.deltaTime;
+        
         if (eventTime <= 0)
         {
             PlayerController.moveSpeed = 5.0f;

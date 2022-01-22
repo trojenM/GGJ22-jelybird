@@ -58,13 +58,9 @@ public class PlayerAnimator : MonoBehaviour
         }
     }
  
-    void Update () {
-     
-        if (Input.GetKeyDown (KeyCode.Space)) {
-         
-            Play ();
- 
-        }
+    void Start ()
+    {
+        Play();
     }
 }
 

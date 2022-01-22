@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class EnemyPoolRight : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs;
     private Queue<GameObject> availableObjects = new Queue<GameObject>();
     public static EnemyPoolRight Instance { get; private set; }
     
@@ -30,7 +31,8 @@ public class EnemyPoolRight : MonoBehaviour
     {
         for (int i = 0; i < n; i++)
         {
-            var instantiatedObj = Instantiate(enemyPrefab,transform);
+            int a = i % 3;
+            var instantiatedObj = Instantiate(enemyPrefabs[a],transform);
             AddToPool(instantiatedObj);
         }
     }

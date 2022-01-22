@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyPool : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs;
     private Queue<GameObject> availableObjects = new Queue<GameObject>();
     public static EnemyPool Instance { get; private set; }
     
@@ -30,7 +30,8 @@ public class EnemyPool : MonoBehaviour
     {
         for (int i = 0; i < n; i++)
         {
-            var instantiatedObj = Instantiate(enemyPrefab,transform);
+            int a = i % 3;
+            var instantiatedObj = Instantiate(enemyPrefabs[a],transform);
             AddToPool(instantiatedObj);
         }
     }

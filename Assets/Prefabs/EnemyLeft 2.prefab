@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4154507007536595906}
   - component: {fileID: 8364609088862437314}
   - component: {fileID: -2423501522935129574}
-  - component: {fileID: -532858151432967961}
+  - component: {fileID: -3820673734853479074}
   m_Layer: 0
-  m_Name: EnemyLeft
+  m_Name: EnemyLeft 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1342968967
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2769817722696815416, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
+  m_Sprite: {fileID: -1427967649767212793, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-532858151432967961
+--- !u!114 &-3820673734853479074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: -2769817722696815416, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
-  - {fileID: 1281211584731451245, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
-  - {fileID: 1119916477710034131, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
+  - {fileID: -1427967649767212793, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
+  - {fileID: -2604943980801924702, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
+  - {fileID: 3859546297911661367, guid: fc955bc7322d0294687837d1af85fd0f, type: 3}
 --- !u!1 &2557337919130059707
 GameObject:
   m_ObjectHideFlags: 0

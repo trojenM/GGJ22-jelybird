@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private Transform movePointBird, movePointJellyFish;
 
-    [SerializeField] public static float moveSpeed = 5f;
+    public static float moveSpeed = 5f;
 
     void Awake()
     {
