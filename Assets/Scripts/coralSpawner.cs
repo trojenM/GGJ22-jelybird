@@ -18,7 +18,7 @@ public class coralSpawner : MonoBehaviour
     {
         if (!waitingToSpawn)
         {
-            spawnTimer = UnityEngine.Random.Range(4f, 8f);
+            spawnTimer = UnityEngine.Random.Range(4f, 6f);
             waitingToSpawn = true;
         }
 
@@ -29,7 +29,6 @@ public class coralSpawner : MonoBehaviour
         {
             int spawnPosIndex = UnityEngine.Random.Range(0, 2);
             Instantiate(coral, transform.GetChild(spawnPosIndex).position, Quaternion.identity);
-            Debug.Log("çalýþtý moruque");
             timer = 0;
             waitingToSpawn = false;
         }

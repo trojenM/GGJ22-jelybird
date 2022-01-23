@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Image = UnityEngine.UI.Image;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,7 +11,9 @@ public class LevelManager : MonoBehaviour
 
     private int health = 6; // 6 half heart
 
-    [SerializeField] private GameObject MainMenuScr;
+    [SerializeField] private Image HealthBarImg;
+    
+    [SerializeField] private GameObject MainMenuScr, InGameScr;
 
     [HideInInspector] public bool isGameEnded = false;
     
@@ -31,6 +35,12 @@ public class LevelManager : MonoBehaviour
     public void GetDamage(int damageAmount)
     {
         health -= damageAmount;
+
+        if (health > 0)
+        {
+            HealthBarImg.fillAmount -= 0.2f;
+        }
+
         CheckGameIsOver();
         Debug.Log(health);
     }
@@ -45,13 +55,15 @@ public class LevelManager : MonoBehaviour
 
     private void GameOver()
     {
-        // game over state        
+        // game over state   
+        RestartGame();
     }
 
     public void StartGame()
     {
         Time.timeScale = 1f;
         MainMenuScr.SetActive(false);
+        InGameScr.SetActive(true);
     }
 
     public void QuitGame()

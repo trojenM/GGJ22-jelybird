@@ -21,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/eventSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuButtonFocus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/coralMove.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="241P35gEJCL0S681yJtoZOzvdrX" />
   <component name="ProjectViewState">
