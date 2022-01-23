@@ -45,7 +45,6 @@ public class parallaxRightLeft : MonoBehaviour
         fizikIki.velocity = new Vector2(-hiz - 1, 0);
         if (BackgroundBir.transform.position.x <= -uzunluk - (uzunluk / 2))
         {
-            Debug.Log(BackgroundBir.transform.position.y);
             BackgroundBir.transform.position += new Vector3(uzunluk * 2, 0);
         }
 

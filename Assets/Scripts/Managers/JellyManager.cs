@@ -27,5 +27,11 @@ public class JellyManager : MonoBehaviour
             other.gameObject.GetComponent<EnemyController>().movePoint.position = Vector3.zero;
 
         }
+        else if (other.CompareTag("Coral"))
+        {
+            LevelManager.Instance.GetDamage(1);
+            Destroy(other.GetComponent<coralMove>().movePoint.gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }

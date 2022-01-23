@@ -29,6 +29,15 @@ public class PlayerController : MonoBehaviour
 
         bird.position = Vector3.MoveTowards(bird.position, movePointBird.position, moveSpeed * Time.deltaTime);
         jellyFish.position = Vector3.MoveTowards(jellyFish.position, movePointJellyFish.position, moveSpeed * Time.deltaTime);
+
+        if (xInput < 0)
+        {
+            bird.localScale = new Vector3(-1, bird.localScale.y, bird.localScale.z);
+        }
+        else
+        {
+            bird.localScale = new Vector3(1, bird.localScale.y, bird.localScale.z);
+        }
         
         if (Vector3.Distance(bird.position, movePointBird.position) <= 0.05f)
         {

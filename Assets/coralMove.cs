@@ -8,11 +8,10 @@ public class coralMove : MonoBehaviour
     private float movePointStartPosY;
     private float speed = 2.0f;
     private int randomY;
-    private bool onTargetY = false;
 
     private bool isUpCoral = false;
     
-    private Transform movePoint = default;
+    [HideInInspector] public Transform movePoint = default;
 
     [SerializeField] private float movePointIntervalX = 1f;
     [SerializeField] private float movePointIntervalY = .3f;

@@ -11,6 +11,8 @@ public class PlayerAnimator : MonoBehaviour
  
     private int currentFrame;
     private bool stopped = false;
+    
+    [SerializeField] private float animSpeedMultiplier = 10f;
  
     public void Awake () {
  
@@ -18,7 +20,7 @@ public class PlayerAnimator : MonoBehaviour
  
         currentFrame = 0;
         if(FPS > 0) 
-            secondsToWait = 1/FPS * 10f;
+            secondsToWait = 1/FPS * animSpeedMultiplier;
         else 
             secondsToWait = 0f;
     }

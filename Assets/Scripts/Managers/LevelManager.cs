@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Image = UnityEngine.UI.Image;
@@ -16,11 +15,17 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject MainMenuScr, InGameScr;
 
     [HideInInspector] public bool isGameEnded = false;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip hitSfx;
+
+    private Animator MenuAnimator;
+
+    [SerializeField] private EnemySpawner enemySpawnerLeft, enemySpawnerRight;
     
     private void Awake()
     {
         MainMenuScr.SetActive(true);
-        Time.timeScale = 0;
         
         if (Instance == null)
         {
@@ -30,11 +35,15 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        MenuAnimator = MainMenuScr.GetComponentInParent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void GetDamage(int damageAmount)
     {
         health -= damageAmount;
+        audioSource.PlayOneShot(hitSfx, 2f);
 
         if (health > 0)
         {
@@ -42,12 +51,11 @@ public class LevelManager : MonoBehaviour
         }
 
         CheckGameIsOver();
-        Debug.Log(health);
     }
 
     private void CheckGameIsOver()
     {
-        if (health <= 0)
+        if (health <= 1)
         {
             GameOver();    
         }
@@ -61,14 +69,26 @@ public class LevelManager : MonoBehaviour
 
     public void StartGame()
     {
-        Time.timeScale = 1f;
-        MainMenuScr.SetActive(false);
+        enemySpawnerLeft.enabled = true;
+        enemySpawnerRight.enabled = true;
+        MainMenuScr.SetActive(true);
         InGameScr.SetActive(true);
+        MenuAnimator.SetTrigger("transitionToGame");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void OpenCredits()
+    {
+        MenuAnimator.SetTrigger("transitionToCredits");
+    }
+
+    public void goBackToMenu()
+    {
+        MenuAnimator.SetTrigger("transitionToMenu");
     }
 
     public void RestartGame()
